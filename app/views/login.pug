@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    head
+      title=title
+      link(href='/css/main.css',rel='stylesheet')
+    body
+        each msg in messages
+            div.flash
+              = msg
+        h1= title
+          form(name='login',method='POST',action='login')
+            div
+              label(for='username') Username
+              input(type="username",name='username',placeholder='Your Username')
+            div
+              label(for='password') Password
+              input(type='password',name='password',placeholder='Your Password')
+            div
+              input(type='checkbox',value='remember',name='remember')
+              | Remember Me
+              input(type='submit',value='Login')
+            
